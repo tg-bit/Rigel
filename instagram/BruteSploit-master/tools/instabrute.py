@@ -355,7 +355,7 @@ if __name__ == "__main__":
     print("""| \__  _/           | '_ \| |_) | | | | | | |  _|       |""")
     print("""|   ( (             | |_) |  _ <| |_| | | | | |___      |""")
     print("""|    ) )            |_.__/|_| \_\_____/ |_| |_____|     |""")
-    print("""|   (_(                                          rigel  |""")
+    print("""|   (_(                                                 |""")
     print("""'-------------------------------------------------------'""")
 
     print(bcolors.OKGREEN + "[+] Username Loaded:", bcolors.BOLD + USER + bcolors.ENDC)
