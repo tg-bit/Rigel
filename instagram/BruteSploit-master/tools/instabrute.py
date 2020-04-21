@@ -1,7 +1,9 @@
 # coding=utf-8
 ###############################################################################
 # Instagram Brute Forcer
-# Developed By Rigel
+# Developed By N3TC@T
+# netcat[dot]av[at]gmail[dot]com 
+# !/usr/bin/python
 ###############################################################################
 from __future__ import print_function
 
@@ -341,17 +343,20 @@ if __name__ == "__main__":
                             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         logger = logging.getLogger(__name__)
 
-     print(bcolors.HEADER + """.-------------------------------------------------------.""")    
-print("""|      _             _ 		|""")
-print("""|     (_)           | |		|""")
-print("""|  _ __ _  __ _  ___| |		|""")
-print("""| | '__| |/ _` |/ _ \ |		|""")
-print("""| | |  | | (_| |  __/ |		|""")
-print("""| |_|  |_|\__, |\___|_|		|""")
-print("""|          __/ |       		|""")
-print("""|         |___/        		|""")
-print("""|							v.01|""")
-print("""'-------------------------------------------------------'""")
+    print(bcolors.HEADER + """.-------------------------------------------------------.""")
+    print("""| |\___/|       ___           _                         |""")
+    print("""| )     (      |_ _|_ __  ___| |_ __ _                  |""")
+    print("""|=\     /=      | || '_ \/ __| __/ _` |                 |""")
+    print("""|  )===(        | || | | \__ \ || (_| |                 |""")
+    print("""| /     \      |___|_| |_|___/\__\__,_|                 |""")
+    print("""| |     |                                               |""")
+    print("""|/       \           _     ____  _   _ _____ _____      |""")
+    print("""|\       /          | |__ |  _ \| | | |_   _| ____|     |""")
+    print("""| \__  _/           | '_ \| |_) | | | | | | |  _|       |""")
+    print("""|   ( (             | |_) |  _ <| |_| | | | | |___      |""")
+    print("""|    ) )            |_.__/|_| \_\_____/ |_| |_____|     |""")
+    print("""|   (_(                                                 |""")
+    print("""'-------------------------------------------------------'""")
 
     print(bcolors.OKGREEN + "[+] Username Loaded:", bcolors.BOLD + USER + bcolors.ENDC)
     print(bcolors.OKGREEN + "[+] Words Loaded:", bcolors.BOLD + str(len(words)) + bcolors.ENDC)
