@@ -50,7 +50,7 @@ termux-notification -t "Tool kullanıma hazır"
 "--upgrade")
 clear
 cd $HOME
-rm -rf T-U-R-K/
+rm -rf Rigel
 git clone https://github.com/tg-bit/Rigel.git
 termux-notification -t "Tool kullanıma hazır"
 ;;
