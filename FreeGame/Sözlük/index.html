@@ -1,0 +1,876 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>İng Tr Sözlük</title>
+
+  <style> 
+    body {
+      background:#FF0
+      font-size:13px;
+    }
+    #wrap {
+      position:relative;
+	}
+	
+	.product-head h1{font-size:100px; font-family:Arial, Helvetica, sans-serif; margin-bottom:10px; margin-left:3px;}
+	
+    .product-head {
+      font-size:12px;
+	  padding:5px;
+	  background-color:#776e65;
+	  width:700px;
+    }
+    .filterform input{
+	
+		 font-size:50px;
+		 padding:3px;
+		 border:1px solid #999;
+    }
+	
+	li{
+		padding:5px;
+		margin:3px;
+		list-style:none;
+		width:230px;
+		border-top:1px solid #ccc;
+		}
+		
+	li a{color:#000; font-family:Arial, Helvetica, sans-serif; font-size:11px}	
+		
+	ul{margin:0; padding:0;}	
+	
+	.clear{
+		clear:both;}
+   </style> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script> 
+ 
+(function ($) {
+  // custom css expression for a case-insensitive contains()
+  jQuery.expr[':'].Contains = function(a,i,m){
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+  };
+ 
+  function filterList(header, list) { 
+  // header is any element, list is an unordered list
+    // create and add the filter form to the header
+    var form = $("<form>").attr({"class":"filterform","action":"#"}),
+        input = $("<input>").attr({"class":"filterinput","type":"text"});
+    $(form).append(input).appendTo(header);
+ 
+    $(input)
+      .change( function () {
+        var filter = $(this).val();
+        if(filter) {
+ 	  
+		  $matches = $(list).find('a:Contains(' + filter + ')').parent();
+		  $('li', list).not($matches).slideUp();
+		  $matches.slideDown();
+		    
+        } else {
+          $(list).find("li").slideDown();
+        }
+        return false;
+      })
+    .keyup( function () {
+        // fire the above change event after every letter
+        $(this).change();
+    });
+  }
+ 
+ 
+  //ondomready
+  $(function () {
+    filterList($("#form"), $("#list"));
+  });
+}(jQuery));
+ 
+  </script> 
+ 
+</head>
+
+<body bgcolor="#f9f6f2">
+
+<center>
+<noscript><div id="noscript">İngilizce Sözlük</div></noscript>
+<div id="container">
+
+<div id="wrap">
+<div class="product-head"> 
+  <h1>Kelime ARA</h1> 
+    <div id="form"></div>
+
+    <div class="clear"></div>
+</div>
+  </center><ul id="list"> 
+<li><img src="soz.fw.png"width="1750" height="400" align=""/>  <a href="#//"></a></li><center>
+  <li><br><b>	</b></br><br><b>	accountant	</b><br><b>	muhasebeci	</br>
+ <li><br><b>	</b></br><br><b>	afraid	</b><br><b>	korkmuş	</br>
+ <li><br><b>	</b></br><br><b>	age	</b><br><b>	yaş	</br>
+ <li><br><b>	</b></br><br><b>	airplane	</b><br><b>	uçak	</br>
+ <li><br><b>	</b></br><br><b>	alone	</b><br><b>	yalnız	</br>
+ <li><br><b>	</b></br><br><b>	angry	</b><br><b>	kızgın-sinirli	</br>
+ <li><br><b>	</b></br><br><b>	animal	</b><br><b>	hayvan	</br>
+ <li><br><b>	</b></br><br><b>	answer	</b><br><b>	cevap vermek	</br>
+ <li><br><b>	</b></br><br><b>	architect	</b><br><b>	mimar	</br>
+ <li><br><b>	</b></br><br><b>	arrive	</b><br><b>	varmak	</br>
+ <li><br><b>	</b></br><br><b>	aunt	</b><br><b>	hala-teyze	</br>
+ <li><br><b>	</b></br><br><b>	bag	</b><br><b>	çanta	</br>
+ <li><br><b>	</b></br><br><b>	ball	</b><br><b>	top	</br>
+ <li><br><b>	</b></br><br><b>	bath	</b><br><b>	banyo	</br>
+ <li><br><b>	</b></br><br><b>	beautiful	</b><br><b>	güzel	</br>
+ <li><br><b>	</b></br><br><b>	bill	</b><br><b>	hesap-fatura	</br>
+ <li><br><b>	</b></br><br><b>	body	</b><br><b>	vücut	</br>
+ <li><br><b>	</b></br><br><b>	boil	</b><br><b>	kaynamak	</br>
+ <li><br><b>	</b></br><br><b>	bookstore	</b><br><b>	kitapçı	</br>
+ <li><br><b>	</b></br><br><b>	boring	</b><br><b>	sıkıcı	</br>
+ <li><br><b>	</b></br><br><b>	borrow	</b><br><b>	ödünç almak	</br>
+ <li><br><b>	</b></br><br><b>	boss	</b><br><b>	patron	</br>
+ <li><br><b>	</b></br><br><b>	bottle	</b><br><b>	şişe	</br>
+ <li><br><b>	</b></br><br><b>	box	</b><br><b>	kutu	</br>
+ <li><br><b>	</b></br><br><b>	brave	</b><br><b>	cesur	</br>
+ <li><br><b>	</b></br><br><b>	bread	</b><br><b>	ekmek	</br>
+ <li><br><b>	</b></br><br><b>	break	</b><br><b>	kırmak	</br>
+ <li><br><b>	</b></br><br><b>	bridge	</b><br><b>	köprü	</br>
+ <li><br><b>	</b></br><br><b>	brush	</b><br><b>	fırça	</br>
+ <li><br><b>	</b></br><br><b>	build	</b><br><b>	inşa etmek 	</br>
+ <li><br><b>	</b></br><br><b>	butter	</b><br><b>	tere yağı	</br>
+ <li><br><b>	</b></br><br><b>	calculator	</b><br><b>	hesap makinası	</br>
+ <li><br><b>	</b></br><br><b>	calendar	</b><br><b>	takvim	</br>
+ <li><br><b>	</b></br><br><b>	call	</b><br><b>	aramak	</br>
+ <li><br><b>	</b></br><br><b>	capital	</b><br><b>	başkent	</br>
+ <li><br><b>	</b></br><br><b>	carpenter	</b><br><b>	marangoz	</br>
+ <li><br><b>	</b></br><br><b>	carpet	</b><br><b>	halı	</br>
+ <li><br><b>	</b></br><br><b>	carry	</b><br><b>	taşımak	</br>
+ <li><br><b>	</b></br><br><b>	cartoon	</b><br><b>	çizgi film	</br>
+ <li><br><b>	</b></br><br><b>	chair	</b><br><b>	sandalye	</br>
+ <li><br><b>	</b></br><br><b>	cheap	</b><br><b>	ucuz	</br>
+ <li><br><b>	</b></br><br><b>	cheese	</b><br><b>	peynir	</br>
+ <li><br><b>	</b></br><br><b>	cherry	</b><br><b>	kiraz	</br>
+ <li><br><b>	</b></br><br><b>	chicken	</b><br><b>	tavuk	</br>
+ <li><br><b>	</b></br><br><b>	church	</b><br><b>	kilise	</br>
+ <li><br><b>	</b></br><br><b>	clean	</b><br><b>	temizlemek	</br>
+ <li><br><b>	</b></br><br><b>	clear	</b><br><b>	açık, net	</br>
+ <li><br><b>	</b></br><br><b>	clever	</b><br><b>	akıllı	</br>
+ <li><br><b>	</b></br><br><b>	clock	</b><br><b>	saat	</br>
+ <li><br><b>	</b></br><br><b>	cloud	</b><br><b>	bulut	</br>
+ <li><br><b>	</b></br><br><b>	coat	</b><br><b>	kaban	</br>
+ <li><br><b>	</b></br><br><b>	cold	</b><br><b>	soğuk	</br>
+ <li><br><b>	</b></br><br><b>	company	</b><br><b>	şirket	</br>
+ <li><br><b>	</b></br><br><b>	continue	</b><br><b>	devam etmek	</br>
+ <li><br><b>	</b></br><br><b>	correct	</b><br><b>	DOĞRU	</br>
+ <li><br><b>	</b></br><br><b>	country	</b><br><b>	ülke	</br>
+ <li><br><b>	</b></br><br><b>	cow	</b><br><b>	inek	</br>
+ <li><br><b>	</b></br><br><b>	cry	</b><br><b>	ağlamak	</br>
+ <li><br><b>	</b></br><br><b>	daily	</b><br><b>	günlük	</br>
+ <li><br><b>	</b></br><br><b>	dark	</b><br><b>	koyu-karanlık	</br>
+ <li><br><b>	</b></br><br><b>	dentist	</b><br><b>	diş hekimi	</br>
+ <li><br><b>	</b></br><br><b>	difficult	</b><br><b>	zor	</br>
+ <li><br><b>	</b></br><br><b>	dirty	</b><br><b>	kirli	</br>
+ <li><br><b>	</b></br><br><b>	divorced	</b><br><b>	boşanmış	</br>
+ <li><br><b>	</b></br><br><b>	draw	</b><br><b>	çizmek	</br>
+ <li><br><b>	</b></br><br><b>	early	</b><br><b>	erken	</br>
+ <li><br><b>	</b></br><br><b>	earn	</b><br><b>	kazanmak	</br>
+ <li><br><b>	</b></br><br><b>	elephant	</b><br><b>	fil	</br>
+ <li><br><b>	</b></br><br><b>	emergency	</b><br><b>	acil	</br>
+ <li><br><b>	</b></br><br><b>	empty	</b><br><b>	boş	</br>
+ <li><br><b>	</b></br><br><b>	engaged	</b><br><b>	nişanlı	</br>
+ <li><br><b>	</b></br><br><b>	engineer	</b><br><b>	mühendis	</br>
+ <li><br><b>	</b></br><br><b>	enough	</b><br><b>	yeterli	</br>
+ <li><br><b>	</b></br><br><b>	eraser	</b><br><b>	silgi	</br>
+ <li><br><b>	</b></br><br><b>	error	</b><br><b>	hata	</br>
+ <li><br><b>	</b></br><br><b>	fall	</b><br><b>	düşmek-sonbahar	</br>
+ <li><br><b>	</b></br><br><b>	far	</b><br><b>	uzak	</br>
+ <li><br><b>	</b></br><br><b>	farm	</b><br><b>	çiftlik	</br>
+ <li><br><b>	</b></br><br><b>	fat	</b><br><b>	şişman	</br>
+ <li><br><b>	</b></br><br><b>	finger	</b><br><b>	parmak	</br>
+ <li><br><b>	</b></br><br><b>	fire	</b><br><b>	ateş-yangın	</br>
+ <li><br><b>	</b></br><br><b>	flight	</b><br><b>	uçuş	</br>
+ <li><br><b>	</b></br><br><b>	floor	</b><br><b>	yer,zemin	</br>
+ <li><br><b>	</b></br><br><b>	fork	</b><br><b>	çatal	</br>
+ <li><br><b>	</b></br><br><b>	friendly	</b><br><b>	arkadaşça	</br>
+ <li><br><b>	</b></br><br><b>	fruit	</b><br><b>	meyve	</br>
+ <li><br><b>	</b></br><br><b>	funny	</b><br><b>	komik	</br>
+ <li><br><b>	</b></br><br><b>	garden	</b><br><b>	bahçe	</br>
+ <li><br><b>	</b></br><br><b>	glass	</b><br><b>	bardak	</br>
+ <li><br><b>	</b></br><br><b>	grape	</b><br><b>	üzüm	</br>
+ <li><br><b>	</b></br><br><b>	gun	</b><br><b>	tabanca	</br>
+ <li><br><b>	</b></br><br><b>	habit	</b><br><b>	alışkanlık	</br>
+ <li><br><b>	</b></br><br><b>	half	</b><br><b>	yarım	</br>
+ <li><br><b>	</b></br><br><b>	hand	</b><br><b>	el	</br>
+ <li><br><b>	</b></br><br><b>	handsome	</b><br><b>	yakışıklı	</br>
+ <li><br><b>	</b></br><br><b>	hate	</b><br><b>	nefret etmek	</br>
+ <li><br><b>	</b></br><br><b>	health	</b><br><b>	sağlık	</br>
+ <li><br><b>	</b></br><br><b>	hear	</b><br><b>	duymak	</br>
+ <li><br><b>	</b></br><br><b>	heart	</b><br><b>	kalp	</br>
+ <li><br><b>	</b></br><br><b>	heavy	</b><br><b>	ağır	</br>
+ <li><br><b>	</b></br><br><b>	high	</b><br><b>	yüksek	</br>
+ <li><br><b>	</b></br><br><b>	history	</b><br><b>	tarih	</br>
+ <li><br><b>	</b></br><br><b>	horror	</b><br><b>	korku	</br>
+ <li><br><b>	</b></br><br><b>	hungry	</b><br><b>	aç	</br>
+ <li><br><b>	</b></br><br><b>	ill	</b><br><b>	hasta	</br>
+ <li><br><b>	</b></br><br><b>	interested	</b><br><b>	ilgili	</br>
+ <li><br><b>	</b></br><br><b>	job	</b><br><b>	meslek	</br>
+ <li><br><b>	</b></br><br><b>	journalist	</b><br><b>	gazeteci	</br>
+ <li><br><b>	</b></br><br><b>	kill	</b><br><b>	öldürmek	</br>
+ <li><br><b>	</b></br><br><b>	large	</b><br><b>	geniş	</br>
+ <li><br><b>	</b></br><br><b>	laugh	</b><br><b>	gülmek	</br>
+ <li><br><b>	</b></br><br><b>	lawyer	</b><br><b>	avukat	</br>
+ <li><br><b>	</b></br><br><b>	leave	</b><br><b>	ayrılmak	</br>
+ <li><br><b>	</b></br><br><b>	left	</b><br><b>	sol	</br>
+ <li><br><b>	</b></br><br><b>	lend	</b><br><b>	ödünç vermek	</br>
+ <li><br><b>	</b></br><br><b>	letter	</b><br><b>	mektup	</br>
+ <li><br><b>	</b></br><br><b>	library	</b><br><b>	kütüphane	</br>
+ <li><br><b>	</b></br><br><b>	light	</b><br><b>	hafif / ışık	</br>
+ <li><br><b>	</b></br><br><b>	lunch	</b><br><b>	öğle yemeği	</br>
+ <li><br><b>	</b></br><br><b>	main	</b><br><b>	ana-temel	</br>
+ <li><br><b>	</b></br><br><b>	manager	</b><br><b>	yönetici,müdür	</br>
+ <li><br><b>	</b></br><br><b>	map	</b><br><b>	harita	</br>
+ <li><br><b>	</b></br><br><b>	married	</b><br><b>	evli	</br>
+ <li><br><b>	</b></br><br><b>	meal	</b><br><b>	yemek	</br>
+ <li><br><b>	</b></br><br><b>	meet	</b><br><b>	buluşmak	</br>
+ <li><br><b>	</b></br><br><b>	meeting	</b><br><b>	toplantı	</br>
+ <li><br><b>	</b></br><br><b>	melon	</b><br><b>	kavun	</br>
+ <li><br><b>	</b></br><br><b>	minute	</b><br><b>	dakika	</br>
+ <li><br><b>	</b></br><br><b>	mirror	</b><br><b>	ayna	</br>
+ <li><br><b>	</b></br><br><b>	miss	</b><br><b>	özlemek	</br>
+ <li><br><b>	</b></br><br><b>	mistake	</b><br><b>	hata	</br>
+ <li><br><b>	</b></br><br><b>	month	</b><br><b>	ay	</br>
+ <li><br><b>	</b></br><br><b>	need	</b><br><b>	ihtiyaç	</br>
+ <li><br><b>	</b></br><br><b>	neighbour	</b><br><b>	komşu	</br>
+ <li><br><b>	</b></br><br><b>	news	</b><br><b>	haberler	</br>
+ <li><br><b>	</b></br><br><b>	nice	</b><br><b>	hoş	</br>
+ <li><br><b>	</b></br><br><b>	nose	</b><br><b>	burun	</br>
+ <li><br><b>	</b></br><br><b>	nurse	</b><br><b>	hemşire	</br>
+ <li><br><b>	</b></br><br><b>	object	</b><br><b>	nesne	</br>
+ <li><br><b>	</b></br><br><b>	opposite	</b><br><b>	karşı-zıt	</br>
+ <li><br><b>	</b></br><br><b>	oven	</b><br><b>	fırın	</br>
+ <li><br><b>	</b></br><br><b>	page	</b><br><b>	sayfa	</br>
+ <li><br><b>	</b></br><br><b>	paint	</b><br><b>	boyamak	</br>
+ <li><br><b>	</b></br><br><b>	parent	</b><br><b>	ebeveyn	</br>
+ <li><br><b>	</b></br><br><b>	pass	</b><br><b>	geçmek	</br>
+ <li><br><b>	</b></br><br><b>	pay	</b><br><b>	ödemek	</br>
+ <li><br><b>	</b></br><br><b>	pepper	</b><br><b>	biber	</br>
+ <li><br><b>	</b></br><br><b>	personal	</b><br><b>	kişisel	</br>
+ <li><br><b>	</b></br><br><b>	pet	</b><br><b>	evcil hayvan	</br>
+ <li><br><b>	</b></br><br><b>	place	</b><br><b>	yer	</br>
+ <li><br><b>	</b></br><br><b>	plane	</b><br><b>	uçak	</br>
+ <li><br><b>	</b></br><br><b>	pocket	</b><br><b>	cep	</br>
+ <li><br><b>	</b></br><br><b>	polite	</b><br><b>	kibar	</br>
+ <li><br><b>	</b></br><br><b>	pool	</b><br><b>	havuz	</br>
+ <li><br><b>	</b></br><br><b>	poor	</b><br><b>	fakir	</br>
+ <li><br><b>	</b></br><br><b>	possible	</b><br><b>	mümkün	</br>
+ <li><br><b>	</b></br><br><b>	push	</b><br><b>	ittirmek	</br>
+ <li><br><b>	</b></br><br><b>	quick	</b><br><b>	hızlı	</br>
+ <li><br><b>	</b></br><br><b>	quiet	</b><br><b>	sessiz	</br>
+ <li><br><b>	</b></br><br><b>	railway	</b><br><b>	tren yolu	</br>
+ <li><br><b>	</b></br><br><b>	ready	</b><br><b>	hazır	</br>
+ <li><br><b>	</b></br><br><b>	refrigerator	</b><br><b>	buzdolabı	</br>
+ <li><br><b>	</b></br><br><b>	remember	</b><br><b>	hatırlamak	</br>
+ <li><br><b>	</b></br><br><b>	rent	</b><br><b>	kiralamak	</br>
+ <li><br><b>	</b></br><br><b>	repair	</b><br><b>	tamir etmek	</br>
+ <li><br><b>	</b></br><br><b>	repeat	</b><br><b>	tekrar etmek	</br>
+ <li><br><b>	</b></br><br><b>	restroom	</b><br><b>	tuvalet	</br>
+ <li><br><b>	</b></br><br><b>	return	</b><br><b>	geri dönmek	</br>
+ <li><br><b>	</b></br><br><b>	rice	</b><br><b>	pirinç	</br>
+ <li><br><b>	</b></br><br><b>	rich	</b><br><b>	zengin	</br>
+ <li><br><b>	</b></br><br><b>	ride	</b><br><b>	binmek	</br>
+ <li><br><b>	</b></br><br><b>	right	</b><br><b>	DOĞRU	</br>
+ <li><br><b>	</b></br><br><b>	ring	</b><br><b>	yüzük-telefonun çalması	</br>
+ <li><br><b>	</b></br><br><b>	rise	</b><br><b>	güneş(doğmak)	</br>
+ <li><br><b>	</b></br><br><b>	river	</b><br><b>	ırmak	</br>
+ <li><br><b>	</b></br><br><b>	road	</b><br><b>	yol	</br>
+ <li><br><b>	</b></br><br><b>	roof	</b><br><b>	çatı	</br>
+ <li><br><b>	</b></br><br><b>	room	</b><br><b>	oda	</br>
+ <li><br><b>	</b></br><br><b>	rose	</b><br><b>	gül	</br>
+ <li><br><b>	</b></br><br><b>	salt	</b><br><b>	tuz	</br>
+ <li><br><b>	</b></br><br><b>	same	</b><br><b>	aynı	</br>
+ <li><br><b>	</b></br><br><b>	security	</b><br><b>	güvenlik	</br>
+ <li><br><b>	</b></br><br><b>	sell	</b><br><b>	satmak	</br>
+ <li><br><b>	</b></br><br><b>	serious	</b><br><b>	ciddi	</br>
+ <li><br><b>	</b></br><br><b>	shelf	</b><br><b>	raf	</br>
+ <li><br><b>	</b></br><br><b>	ship	</b><br><b>	gemi	</br>
+ <li><br><b>	</b></br><br><b>	shirt	</b><br><b>	gömlek	</br>
+ <li><br><b>	</b></br><br><b>	shoe	</b><br><b>	ayakkabı	</br>
+ <li><br><b>	</b></br><br><b>	show	</b><br><b>	göstermek	</br>
+ <li><br><b>	</b></br><br><b>	sick	</b><br><b>	hasta	</br>
+ <li><br><b>	</b></br><br><b>	sing	</b><br><b>	şarkı söylemek	</br>
+ <li><br><b>	</b></br><br><b>	single	</b><br><b>	bekar	</br>
+ <li><br><b>	</b></br><br><b>	skirt	</b><br><b>	etek	</br>
+ <li><br><b>	</b></br><br><b>	sky	</b><br><b>	gökyüzü	</br>
+ <li><br><b>	</b></br><br><b>	smile	</b><br><b>	gülümsemek	</br>
+ <li><br><b>	</b></br><br><b>	snow	</b><br><b>	kar	</br>
+ <li><br><b>	</b></br><br><b>	socks	</b><br><b>	çorap	</br>
+ <li><br><b>	</b></br><br><b>	son	</b><br><b>	erkek kardeş	</br>
+ <li><br><b>	</b></br><br><b>	song	</b><br><b>	şarkı	</br>
+ <li><br><b>	</b></br><br><b>	soup	</b><br><b>	çorba	</br>
+ <li><br><b>	</b></br><br><b>	spend	</b><br><b>	harcamak	</br>
+ <li><br><b>	</b></br><br><b>	spoon	</b><br><b>	kaşık	</br>
+ <li><br><b>	</b></br><br><b>	stamp	</b><br><b>	pul	</br>
+ <li><br><b>	</b></br><br><b>	stay	</b><br><b>	kalmak	</br>
+ <li><br><b>	</b></br><br><b>	story	</b><br><b>	hikaye	</br>
+ <li><br><b>	</b></br><br><b>	strawberry	</b><br><b>	çilek	</br>
+ <li><br><b>	</b></br><br><b>	strong	</b><br><b>	güçlü	</br>
+ <li><br><b>	</b></br><br><b>	successful	</b><br><b>	başarılı	</br>
+ <li><br><b>	</b></br><br><b>	suit	</b><br><b>	takım elbise	</br>
+ <li><br><b>	</b></br><br><b>	sweet	</b><br><b>	tatlı	</br>
+ <li><br><b>	</b></br><br><b>	talk	</b><br><b>	konuşmak	</br>
+ <li><br><b>	</b></br><br><b>	tall	</b><br><b>	uzun	</br>
+ <li><br><b>	</b></br><br><b>	teach	</b><br><b>	öğretmek	</br>
+ <li><br><b>	</b></br><br><b>	thick	</b><br><b>	kalın	</br>
+ <li><br><b>	</b></br><br><b>	thief	</b><br><b>	hırsız	</br>
+ <li><br><b>	</b></br><br><b>	thin	</b><br><b>	zayıf	</br>
+ <li><br><b>	</b></br><br><b>	think	</b><br><b>	düşünmek	</br>
+ <li><br><b>	</b></br><br><b>	thirsty	</b><br><b>	susamış	</br>
+ <li><br><b>	</b></br><br><b>	ticket	</b><br><b>	bilet	</br>
+ <li><br><b>	</b></br><br><b>	tidy	</b><br><b>	düzenlemek	</br>
+ <li><br><b>	</b></br><br><b>	tired	</b><br><b>	yorgun	</br>
+ <li><br><b>	</b></br><br><b>	toothbrush	</b><br><b>	diş fırçası	</br>
+ <li><br><b>	</b></br><br><b>	toothpaste	</b><br><b>	diş macunu	</br>
+ <li><br><b>	</b></br><br><b>	towel	</b><br><b>	havlu	</br>
+ <li><br><b>	</b></br><br><b>	tower	</b><br><b>	kule	</br>
+ <li><br><b>	</b></br><br><b>	town	</b><br><b>	kasaba	</br>
+ <li><br><b>	</b></br><br><b>	toy	</b><br><b>	oyuncak	</br>
+ <li><br><b>	</b></br><br><b>	trainers	</b><br><b>	spor ayakkabı	</br>
+ <li><br><b>	</b></br><br><b>	travel	</b><br><b>	seyahat	</br>
+ <li><br><b>	</b></br><br><b>	tree	</b><br><b>	ağaç	</br>
+ <li><br><b>	</b></br><br><b>	trousers	</b><br><b>	pantolon	</br>
+ <li><br><b>	</b></br><br><b>	turn	</b><br><b>	dönmek	</br>
+ <li><br><b>	</b></br><br><b>	ugly	</b><br><b>	çirkin	</br>
+ <li><br><b>	</b></br><br><b>	umbrella	</b><br><b>	şemsiye	</br>
+ <li><br><b>	</b></br><br><b>	uncle	</b><br><b>	amca-dayı	</br>
+ <li><br><b>	</b></br><br><b>	understand	</b><br><b>	anlamak	</br>
+ <li><br><b>	</b></br><br><b>	underwear	</b><br><b>	iç çamaşırı	</br>
+ <li><br><b>	</b></br><br><b>	waiter	</b><br><b>	garson	</br>
+ <li><br><b>	</b></br><br><b>	wall	</b><br><b>	duvar	</br>
+ <li><br><b>	</b></br><br><b>	watermelon	</b><br><b>	karpuz	</br>
+ <li><br><b>	</b></br><br><b>	way	</b><br><b>	yol	</br>
+ <li><br><b>	</b></br><br><b>	weak	</b><br><b>	güçsüz	</br>
+ <li><br><b>	</b></br><br><b>	wear	</b><br><b>	giyinmek	</br>
+ <li><br><b>	</b></br><br><b>	week	</b><br><b>	hafta	</br>
+ <li><br><b>	</b></br><br><b>	wind	</b><br><b>	rüzgar	</br>
+ <li><br><b>	</b></br><br><b>	winter	</b><br><b>	kış	</br>
+ <li><br><b>	</b></br><br><b>	wonderful	</b><br><b>	harika	</br>
+ <li><br><b>	</b></br><br><b>	word	</b><br><b>	kelime	</br>
+ <li><br><b>	</b></br><br><b>	wrong	</b><br><b>	YANLIŞ	</br>
+ <li><br><b>	</b></br><br><b>	zoo	</b><br><b>	hayvanat bahçesi	</br>
+ <li><br><b>	</b></br><br><b>	abroad	</b><br><b>	yurt dışı	</br>
+ <li><br><b>	</b></br><br><b>	accept	</b><br><b>	kabul etmek	</br>
+ <li><br><b>	</b></br><br><b>	accident	</b><br><b>	kaza	</br>
+ <li><br><b>	</b></br><br><b>	adventure	</b><br><b>	macera	</br>
+ <li><br><b>	</b></br><br><b>	agree	</b><br><b>	katılmak(bir düşünceye)	</br>
+ <li><br><b>	</b></br><br><b>	anniversary	</b><br><b>	yıl dönümü	</br>
+ <li><br><b>	</b></br><br><b>	ant	</b><br><b>	karınca	</br>
+ <li><br><b>	</b></br><br><b>	area	</b><br><b>	bölge	</br>
+ <li><br><b>	</b></br><br><b>	argue	</b><br><b>	tartışmak	</br>
+ <li><br><b>	</b></br><br><b>	arm	</b><br><b>	kol	</br>
+ <li><br><b>	</b></br><br><b>	backgammon	</b><br><b>	tavla	</br>
+ <li><br><b>	</b></br><br><b>	begin	</b><br><b>	başlamak	</br>
+ <li><br><b>	</b></br><br><b>	believe	</b><br><b>	inanmak	</br>
+ <li><br><b>	</b></br><br><b>	bell	</b><br><b>	zil	</br>
+ <li><br><b>	</b></br><br><b>	bite	</b><br><b>	ısırmak	</br>
+ <li><br><b>	</b></br><br><b>	blanket	</b><br><b>	battaniye	</br>
+ <li><br><b>	</b></br><br><b>	brain	</b><br><b>	beyin	</br>
+ <li><br><b>	</b></br><br><b>	bring	</b><br><b>	getirmek	</br>
+ <li><br><b>	</b></br><br><b>	business	</b><br><b>	iş	</br>
+ <li><br><b>	</b></br><br><b>	busy	</b><br><b>	meşgul	</br>
+ <li><br><b>	</b></br><br><b>	cable	</b><br><b>	kablo	</br>
+ <li><br><b>	</b></br><br><b>	can	</b><br><b>	konserve kutusu	</br>
+ <li><br><b>	</b></br><br><b>	cap	</b><br><b>	kasket,başlık	</br>
+ <li><br><b>	</b></br><br><b>	cash	</b><br><b>	nakit para	</br>
+ <li><br><b>	</b></br><br><b>	catch	</b><br><b>	yakalamak	</br>
+ <li><br><b>	</b></br><br><b>	chance	</b><br><b>	şans,imkan	</br>
+ <li><br><b>	</b></br><br><b>	changing room	</b><br><b>	soyunma odası	</br>
+ <li><br><b>	</b></br><br><b>	chess	</b><br><b>	satranç	</br>
+ <li><br><b>	</b></br><br><b>	chewing gum	</b><br><b>	sakız	</br>
+ <li><br><b>	</b></br><br><b>	chin	</b><br><b>	çene	</br>
+ <li><br><b>	</b></br><br><b>	choose	</b><br><b>	seçmek	</br>
+ <li><br><b>	</b></br><br><b>	climb	</b><br><b>	tırmanmak	</br>
+ <li><br><b>	</b></br><br><b>	cloth	</b><br><b>	kıyafet	</br>
+ <li><br><b>	</b></br><br><b>	collect	</b><br><b>	toplamak	</br>
+ <li><br><b>	</b></br><br><b>	complete	</b><br><b>	tamamlamak	</br>
+ <li><br><b>	</b></br><br><b>	confused	</b><br><b>	kafası karışık,allak bullak	</br>
+ <li><br><b>	</b></br><br><b>	connect	</b><br><b>	bağlanmak	</br>
+ <li><br><b>	</b></br><br><b>	contact	</b><br><b>	irtibata geçmek	</br>
+ <li><br><b>	</b></br><br><b>	cookies	</b><br><b>	kurabiye	</br>
+ <li><br><b>	</b></br><br><b>	cool	</b><br><b>	havalı, serin	</br>
+ <li><br><b>	</b></br><br><b>	cost	</b><br><b>	tutar, maliyet	</br>
+ <li><br><b>	</b></br><br><b>	cotton	</b><br><b>	pamuk	</br>
+ <li><br><b>	</b></br><br><b>	couch	</b><br><b>	kanepe	</br>
+ <li><br><b>	</b></br><br><b>	cough	</b><br><b>	öksürmek	</br>
+ <li><br><b>	</b></br><br><b>	crazy	</b><br><b>	çılgın	</br>
+ <li><br><b>	</b></br><br><b>	curious	</b><br><b>	meraklı	</br>
+ <li><br><b>	</b></br><br><b>	customer	</b><br><b>	müşteri	</br>
+ <li><br><b>	</b></br><br><b>	cut	</b><br><b>	kesmek	</br>
+ <li><br><b>	</b></br><br><b>	cute	</b><br><b>	şirin	</br>
+ <li><br><b>	</b></br><br><b>	damage	</b><br><b>	zarar vermek	</br>
+ <li><br><b>	</b></br><br><b>	dangerous	</b><br><b>	tehlikeli	</br>
+ <li><br><b>	</b></br><br><b>	dead	</b><br><b>	ölü	</br>
+ <li><br><b>	</b></br><br><b>	decide	</b><br><b>	karar vermek	</br>
+ <li><br><b>	</b></br><br><b>	deep	</b><br><b>	derin	</br>
+ <li><br><b>	</b></br><br><b>	delete	</b><br><b>	silmek	</br>
+ <li><br><b>	</b></br><br><b>	delicious	</b><br><b>	lezzetli	</br>
+ <li><br><b>	</b></br><br><b>	describe	</b><br><b>	betimlemek	</br>
+ <li><br><b>	</b></br><br><b>	diamond	</b><br><b>	elmas	</br>
+ <li><br><b>	</b></br><br><b>	die	</b><br><b>	ölmek	</br>
+ <li><br><b>	</b></br><br><b>	direction	</b><br><b>	yön vermek	</br>
+ <li><br><b>	</b></br><br><b>	discover	</b><br><b>	keşfetmek	</br>
+ <li><br><b>	</b></br><br><b>	discuss	</b><br><b>	tartışmak	</br>
+ <li><br><b>	</b></br><br><b>	disturb	</b><br><b>	rahatsız etmek	</br>
+ <li><br><b>	</b></br><br><b>	drawer	</b><br><b>	çekmece	</br>
+ <li><br><b>	</b></br><br><b>	dream	</b><br><b>	rüya	</br>
+ <li><br><b>	</b></br><br><b>	earring	</b><br><b>	küpe	</br>
+ <li><br><b>	</b></br><br><b>	elbow	</b><br><b>	dirsek	</br>
+ <li><br><b>	</b></br><br><b>	elevator	</b><br><b>	asansör	</br>
+ <li><br><b>	</b></br><br><b>	enjoy	</b><br><b>	tadını çıkarmak	</br>
+ <li><br><b>	</b></br><br><b>	entertainment	</b><br><b>	eğlence	</br>
+ <li><br><b>	</b></br><br><b>	equal	</b><br><b>	eşit	</br>
+ <li><br><b>	</b></br><br><b>	escape	</b><br><b>	çıkış,kaçış	</br>
+ <li><br><b>	</b></br><br><b>	excellent	</b><br><b>	muhteşem	</br>
+ <li><br><b>	</b></br><br><b>	exhausted	</b><br><b>	çok yorgun,tükenmiş	</br>
+ <li><br><b>	</b></br><br><b>	expensive	</b><br><b>	pahalı	</br>
+ <li><br><b>	</b></br><br><b>	experience	</b><br><b>	deneyim	</br>
+ <li><br><b>	</b></br><br><b>	explain	</b><br><b>	açıklamak	</br>
+ <li><br><b>	</b></br><br><b>	eyebrow	</b><br><b>	kaş	</br>
+ <li><br><b>	</b></br><br><b>	eyelash	</b><br><b>	kirpik	</br>
+ <li><br><b>	</b></br><br><b>	eyelid	</b><br><b>	göz kapağı	</br>
+ <li><br><b>	</b></br><br><b>	face	</b><br><b>	yüz	</br>
+ <li><br><b>	</b></br><br><b>	factory	</b><br><b>	fabrika	</br>
+ <li><br><b>	</b></br><br><b>	fail	</b><br><b>	başarısız olmak	</br>
+ <li><br><b>	</b></br><br><b>	famous	</b><br><b>	ünlü	</br>
+ <li><br><b>	</b></br><br><b>	fan	</b><br><b>	hayran	</br>
+ <li><br><b>	</b></br><br><b>	feel	</b><br><b>	hissetmek	</br>
+ <li><br><b>	</b></br><br><b>	female	</b><br><b>	kadın	</br>
+ <li><br><b>	</b></br><br><b>	fight	</b><br><b>	kavga etmek	</br>
+ <li><br><b>	</b></br><br><b>	fill	</b><br><b>	doldurmak	</br>
+ <li><br><b>	</b></br><br><b>	first aid	</b><br><b>	ilk yardım	</br>
+ <li><br><b>	</b></br><br><b>	flag	</b><br><b>	bayrak	</br>
+ <li><br><b>	</b></br><br><b>	flat	</b><br><b>	apartman dairesi	</br>
+ <li><br><b>	</b></br><br><b>	flour	</b><br><b>	un	</br>
+ <li><br><b>	</b></br><br><b>	fog	</b><br><b>	sis	</br>
+ <li><br><b>	</b></br><br><b>	follow	</b><br><b>	takip etmek	</br>
+ <li><br><b>	</b></br><br><b>	food	</b><br><b>	gıda, yiyecek	</br>
+ <li><br><b>	</b></br><br><b>	foreign	</b><br><b>	yabancı	</br>
+ <li><br><b>	</b></br><br><b>	formal	</b><br><b>	resmi	</br>
+ <li><br><b>	</b></br><br><b>	fresh	</b><br><b>	taze	</br>
+ <li><br><b>	</b></br><br><b>	front	</b><br><b>	ön	</br>
+ <li><br><b>	</b></br><br><b>	fuel	</b><br><b>	akaryakıt	</br>
+ <li><br><b>	</b></br><br><b>	furniture	</b><br><b>	mobilya	</br>
+ <li><br><b>	</b></br><br><b>	future	</b><br><b>	gelecek	</br>
+ <li><br><b>	</b></br><br><b>	garlic	</b><br><b>	sarımsak	</br>
+ <li><br><b>	</b></br><br><b>	gate	</b><br><b>	kapı	</br>
+ <li><br><b>	</b></br><br><b>	generous	</b><br><b>	cömert	</br>
+ <li><br><b>	</b></br><br><b>	gift	</b><br><b>	hediye	</br>
+ <li><br><b>	</b></br><br><b>	glad	</b><br><b>	mutlu	</br>
+ <li><br><b>	</b></br><br><b>	glove	</b><br><b>	eldiven	</br>
+ <li><br><b>	</b></br><br><b>	graduate	</b><br><b>	mezun olmak	</br>
+ <li><br><b>	</b></br><br><b>	grass	</b><br><b>	ot, çimen	</br>
+ <li><br><b>	</b></br><br><b>	grocer	</b><br><b>	bakkal,market	</br>
+ <li><br><b>	</b></br><br><b>	grow	</b><br><b>	büyümek,büyütmek	</br>
+ <li><br><b>	</b></br><br><b>	guide	</b><br><b>	rehber	</br>
+ <li><br><b>	</b></br><br><b>	hard	</b><br><b>	sert	</br>
+ <li><br><b>	</b></br><br><b>	harmful	</b><br><b>	zararlı	</br>
+ <li><br><b>	</b></br><br><b>	huge	</b><br><b>	çok büyük	</br>
+ <li><br><b>	</b></br><br><b>	idea	</b><br><b>	fikir	</br>
+ <li><br><b>	</b></br><br><b>	impossible	</b><br><b>	imkansız	</br>
+ <li><br><b>	</b></br><br><b>	insect	</b><br><b>	böcek	</br>
+ <li><br><b>	</b></br><br><b>	intelligent	</b><br><b>	akıllı,zeki	</br>
+ <li><br><b>	</b></br><br><b>	introduce	</b><br><b>	tanıtmak,tanıştırmak	</br>
+ <li><br><b>	</b></br><br><b>	invite	</b><br><b>	davet etmek	</br>
+ <li><br><b>	</b></br><br><b>	island	</b><br><b>	ada	</br>
+ <li><br><b>	</b></br><br><b>	jam	</b><br><b>	reçel	</br>
+ <li><br><b>	</b></br><br><b>	jar	</b><br><b>	kavanoz	</br>
+ <li><br><b>	</b></br><br><b>	join	</b><br><b>	katılmak	</br>
+ <li><br><b>	</b></br><br><b>	joke	</b><br><b>	şaka	</br>
+ <li><br><b>	</b></br><br><b>	journey	</b><br><b>	seyahat	</br>
+ <li><br><b>	</b></br><br><b>	juice	</b><br><b>	meyve suyu	</br>
+ <li><br><b>	</b></br><br><b>	jump	</b><br><b>	zıplamak	</br>
+ <li><br><b>	</b></br><br><b>	key	</b><br><b>	anahtar	</br>
+ <li><br><b>	</b></br><br><b>	kick	</b><br><b>	tekme	</br>
+ <li><br><b>	</b></br><br><b>	kind	</b><br><b>	kibar	</br>
+ <li><br><b>	</b></br><br><b>	knee	</b><br><b>	diz	</br>
+ <li><br><b>	</b></br><br><b>	knife	</b><br><b>	bıçak	</br>
+ <li><br><b>	</b></br><br><b>	lake	</b><br><b>	göl	</br>
+ <li><br><b>	</b></br><br><b>	lamb	</b><br><b>	kuzu	</br>
+ <li><br><b>	</b></br><br><b>	leather	</b><br><b>	deri	</br>
+ <li><br><b>	</b></br><br><b>	leg	</b><br><b>	bacak	</br>
+ <li><br><b>	</b></br><br><b>	lift	</b><br><b>	asansör	</br>
+ <li><br><b>	</b></br><br><b>	lip	</b><br><b>	dudak	</br>
+ <li><br><b>	</b></br><br><b>	lock	</b><br><b>	kilitlemek	</br>
+ <li><br><b>	</b></br><br><b>	lose	</b><br><b>	kaybetmek	</br>
+ <li><br><b>	</b></br><br><b>	loud	</b><br><b>	yüksek ses 	</br>
+ <li><br><b>	</b></br><br><b>	lovely	</b><br><b>	sevimli	</br>
+ <li><br><b>	</b></br><br><b>	luck	</b><br><b>	şans	</br>
+ <li><br><b>	</b></br><br><b>	magic	</b><br><b>	sihir	</br>
+ <li><br><b>	</b></br><br><b>	mall	</b><br><b>	alışveriş merkezi	</br>
+ <li><br><b>	</b></br><br><b>	meat	</b><br><b>	et	</br>
+ <li><br><b>	</b></br><br><b>	medicine	</b><br><b>	ilaç	</br>
+ <li><br><b>	</b></br><br><b>	mend	</b><br><b>	tamir etmek	</br>
+ <li><br><b>	</b></br><br><b>	mixed	</b><br><b>	karışık	</br>
+ <li><br><b>	</b></br><br><b>	monkey	</b><br><b>	maymun	</br>
+ <li><br><b>	</b></br><br><b>	moon	</b><br><b>	ay	</br>
+ <li><br><b>	</b></br><br><b>	mountain	</b><br><b>	dağ	</br>
+ <li><br><b>	</b></br><br><b>	mouth	</b><br><b>	ağız	</br>
+ <li><br><b>	</b></br><br><b>	move	</b><br><b>	hareket etmek,taşınmak	</br>
+ <li><br><b>	</b></br><br><b>	nail clippers	</b><br><b>	tırnak makası	</br>
+ <li><br><b>	</b></br><br><b>	naughty	</b><br><b>	yaramaz	</br>
+ <li><br><b>	</b></br><br><b>	nervous	</b><br><b>	endişeli	</br>
+ <li><br><b>	</b></br><br><b>	noise	</b><br><b>	ses	</br>
+ <li><br><b>	</b></br><br><b>	novel	</b><br><b>	roman	</br>
+ <li><br><b>	</b></br><br><b>	ocean	</b><br><b>	okyanus	</br>
+ <li><br><b>	</b></br><br><b>	officer	</b><br><b>	memur, yetkili	</br>
+ <li><br><b>	</b></br><br><b>	oil	</b><br><b>	yağ	</br>
+ <li><br><b>	</b></br><br><b>	overweight	</b><br><b>	kilolu	</br>
+ <li><br><b>	</b></br><br><b>	pick	</b><br><b>	toplamak	</br>
+ <li><br><b>	</b></br><br><b>	plant	</b><br><b>	bitki	</br>
+ <li><br><b>	</b></br><br><b>	plate	</b><br><b>	tabak	</br>
+ <li><br><b>	</b></br><br><b>	poem	</b><br><b>	şiir	</br>
+ <li><br><b>	</b></br><br><b>	point	</b><br><b>	nokta	</br>
+ <li><br><b>	</b></br><br><b>	power	</b><br><b>	güç	</br>
+ <li><br><b>	</b></br><br><b>	prepare	</b><br><b>	hazırlamak	</br>
+ <li><br><b>	</b></br><br><b>	pretty	</b><br><b>	sevimli	</br>
+ <li><br><b>	</b></br><br><b>	price	</b><br><b>	fiyat	</br>
+ <li><br><b>	</b></br><br><b>	produce	</b><br><b>	üretmek	</br>
+ <li><br><b>	</b></br><br><b>	queen	</b><br><b>	kraliçe	</br>
+ <li><br><b>	</b></br><br><b>	reach	</b><br><b>	ulaşmak	</br>
+ <li><br><b>	</b></br><br><b>	reason	</b><br><b>	sebep	</br>
+ <li><br><b>	</b></br><br><b>	record	</b><br><b>	kaydetmek	</br>
+ <li><br><b>	</b></br><br><b>	refuse	</b><br><b>	reddetmek	</br>
+ <li><br><b>	</b></br><br><b>	relation	</b><br><b>	ilişki	</br>
+ <li><br><b>	</b></br><br><b>	relax	</b><br><b>	dinlenmek	</br>
+ <li><br><b>	</b></br><br><b>	remote control	</b><br><b>	kumanda	</br>
+ <li><br><b>	</b></br><br><b>	reply	</b><br><b>	cevaplamak	</br>
+ <li><br><b>	</b></br><br><b>	report	</b><br><b>	rapor etmek	</br>
+ <li><br><b>	</b></br><br><b>	retire	</b><br><b>	emekliye ayrılmak	</br>
+ <li><br><b>	</b></br><br><b>	rock	</b><br><b>	kaya	</br>
+ <li><br><b>	</b></br><br><b>	rope	</b><br><b>	ip	</br>
+ <li><br><b>	</b></br><br><b>	rude	</b><br><b>	kaba	</br>
+ <li><br><b>	</b></br><br><b>	rule	</b><br><b>	kural	</br>
+ <li><br><b>	</b></br><br><b>	safe	</b><br><b>	güvenli	</br>
+ <li><br><b>	</b></br><br><b>	salary	</b><br><b>	maaş	</br>
+ <li><br><b>	</b></br><br><b>	save	</b><br><b>	kaydetmek	</br>
+ <li><br><b>	</b></br><br><b>	scissors	</b><br><b>	makas	</br>
+ <li><br><b>	</b></br><br><b>	seat	</b><br><b>	koltuk	</br>
+ <li><br><b>	</b></br><br><b>	select	</b><br><b>	seçmek	</br>
+ <li><br><b>	</b></br><br><b>	send	</b><br><b>	göndermek	</br>
+ <li><br><b>	</b></br><br><b>	serious	</b><br><b>	ciddi	</br>
+ <li><br><b>	</b></br><br><b>	serve	</b><br><b>	servis yapmak	</br>
+ <li><br><b>	</b></br><br><b>	sharp	</b><br><b>	keskin,sivri	</br>
+ <li><br><b>	</b></br><br><b>	shine	</b><br><b>	parlamak	</br>
+ <li><br><b>	</b></br><br><b>	shoulder	</b><br><b>	omuz	</br>
+ <li><br><b>	</b></br><br><b>	shout	</b><br><b>	bağırmak	</br>
+ <li><br><b>	</b></br><br><b>	sign	</b><br><b>	imza atmak	</br>
+ <li><br><b>	</b></br><br><b>	silent	</b><br><b>	sessiz	</br>
+ <li><br><b>	</b></br><br><b>	simple	</b><br><b>	basit	</br>
+ <li><br><b>	</b></br><br><b>	situation	</b><br><b>	durum	</br>
+ <li><br><b>	</b></br><br><b>	ski	</b><br><b>	kayak	</br>
+ <li><br><b>	</b></br><br><b>	snake	</b><br><b>	yılan	</br>
+ <li><br><b>	</b></br><br><b>	soap	</b><br><b>	sabun	</br>
+ <li><br><b>	</b></br><br><b>	society	</b><br><b>	sosyete	</br>
+ <li><br><b>	</b></br><br><b>	soft	</b><br><b>	yumuşak	</br>
+ <li><br><b>	</b></br><br><b>	spider	</b><br><b>	örümcek	</br>
+ <li><br><b>	</b></br><br><b>	stand	</b><br><b>	ayakta durmak	</br>
+ <li><br><b>	</b></br><br><b>	stone	</b><br><b>	taş	</br>
+ <li><br><b>	</b></br><br><b>	storm	</b><br><b>	fırtına	</br>
+ <li><br><b>	</b></br><br><b>	subway	</b><br><b>	metro	</br>
+ <li><br><b>	</b></br><br><b>	sure	</b><br><b>	emin olmak	</br>
+ <li><br><b>	</b></br><br><b>	surprised	</b><br><b>	şaşırmış	</br>
+ <li><br><b>	</b></br><br><b>	tailor	</b><br><b>	terzi	</br>
+ <li><br><b>	</b></br><br><b>	taste	</b><br><b>	tatmak	</br>
+ <li><br><b>	</b></br><br><b>	team	</b><br><b>	takım	</br>
+ <li><br><b>	</b></br><br><b>	temperature	</b><br><b>	derece,ısı	</br>
+ <li><br><b>	</b></br><br><b>	tent	</b><br><b>	çadır	</br>
+ <li><br><b>	</b></br><br><b>	terrible	</b><br><b>	berbat	</br>
+ <li><br><b>	</b></br><br><b>	throw	</b><br><b>	atmak,fırlatmak	</br>
+ <li><br><b>	</b></br><br><b>	tiger	</b><br><b>	kaplan	</br>
+ <li><br><b>	</b></br><br><b>	tissue	</b><br><b>	kağıt mendil	</br>
+ <li><br><b>	</b></br><br><b>	tongue	</b><br><b>	dil	</br>
+ <li><br><b>	</b></br><br><b>	touch	</b><br><b>	dokumak	</br>
+ <li><br><b>	</b></br><br><b>	transport	</b><br><b>	nakil, taşıma	</br>
+ <li><br><b>	</b></br><br><b>	trouble	</b><br><b>	dert	</br>
+ <li><br><b>	</b></br><br><b>	try	</b><br><b>	denemek	</br>
+ <li><br><b>	</b></br><br><b>	usual	</b><br><b>	olağan	</br>
+ <li><br><b>	</b></br><br><b>	vacation	</b><br><b>	tatil	</br>
+ <li><br><b>	</b></br><br><b>	vacuum cleaner	</b><br><b>	elektrik süpürgesi	</br>
+ <li><br><b>	</b></br><br><b>	valuable	</b><br><b>	değerli	</br>
+ <li><br><b>	</b></br><br><b>	vegetable	</b><br><b>	sebze	</br>
+ <li><br><b>	</b></br><br><b>	view	</b><br><b>	manzara, görünüm	</br>
+ <li><br><b>	</b></br><br><b>	voice	</b><br><b>	ses	</br>
+ <li><br><b>	</b></br><br><b>	war	</b><br><b>	savaş	</br>
+ <li><br><b>	</b></br><br><b>	warm	</b><br><b>	ılık	</br>
+ <li><br><b>	</b></br><br><b>	warning	</b><br><b>	uyarı	</br>
+ <li><br><b>	</b></br><br><b>	weather	</b><br><b>	hava	</br>
+ <li><br><b>	</b></br><br><b>	wet	</b><br><b>	ıslak	</br>
+ <li><br><b>	</b></br><br><b>	win	</b><br><b>	kazanmak	</br>
+ <li><br><b>	</b></br><br><b>	wine	</b><br><b>	şarap	</br>
+ <li><br><b>	</b></br><br><b>	worry	</b><br><b>	endişe	</br>
+ <li><br><b>	</b></br><br><b>	accommodation	</b><br><b>	konaklama	</br>
+ <li><br><b>	</b></br><br><b>	addition	</b><br><b>	ek,ilave	</br>
+ <li><br><b>	</b></br><br><b>	admire	</b><br><b>	hayran olmak	</br>
+ <li><br><b>	</b></br><br><b>	adopt	</b><br><b>	evlat edinmek	</br>
+ <li><br><b>	</b></br><br><b>	adult	</b><br><b>	yetişkin	</br>
+ <li><br><b>	</b></br><br><b>	advertisement	</b><br><b>	reklam	</br>
+ <li><br><b>	</b></br><br><b>	advice	</b><br><b>	tavsiye	</br>
+ <li><br><b>	</b></br><br><b>	affection	</b><br><b>	şevkat	</br>
+ <li><br><b>	</b></br><br><b>	afford	</b><br><b>	maddi olanağa sahip olmak	</br>
+ <li><br><b>	</b></br><br><b>	allow	</b><br><b>	izin vermek	</br>
+ <li><br><b>	</b></br><br><b>	amount	</b><br><b>	miktar	</br>
+ <li><br><b>	</b></br><br><b>	annual	</b><br><b>	yıllık	</br>
+ <li><br><b>	</b></br><br><b>	anxious	</b><br><b>	tedirgin,endişeli	</br>
+ <li><br><b>	</b></br><br><b>	apologize	</b><br><b>	özür dilemek	</br>
+ <li><br><b>	</b></br><br><b>	appear	</b><br><b>	ortaya çıkmak	</br>
+ <li><br><b>	</b></br><br><b>	application	</b><br><b>	başvuru	</br>
+ <li><br><b>	</b></br><br><b>	apply	</b><br><b>	başvurmak	</br>
+ <li><br><b>	</b></br><br><b>	appointment	</b><br><b>	randevu	</br>
+ <li><br><b>	</b></br><br><b>	army	</b><br><b>	ordu	</br>
+ <li><br><b>	</b></br><br><b>	arrange	</b><br><b>	ayarlamak,düzenlemek	</br>
+ <li><br><b>	</b></br><br><b>	art	</b><br><b>	sanat	</br>
+ <li><br><b>	</b></br><br><b>	ashamed	</b><br><b>	utanmış	</br>
+ <li><br><b>	</b></br><br><b>	ashtray	</b><br><b>	küllük	</br>
+ <li><br><b>	</b></br><br><b>	attack	</b><br><b>	saldırmak	</br>
+ <li><br><b>	</b></br><br><b>	attend	</b><br><b>	katılmak	</br>
+ <li><br><b>	</b></br><br><b>	attention	</b><br><b>	dikkat	</br>
+ <li><br><b>	</b></br><br><b>	attract	</b><br><b>	etkilemek	</br>
+ <li><br><b>	</b></br><br><b>	average	</b><br><b>	ortalama	</br>
+ <li><br><b>	</b></br><br><b>	behave	</b><br><b>	davranmak	</br>
+ <li><br><b>	</b></br><br><b>	belief	</b><br><b>	inanç	</br>
+ <li><br><b>	</b></br><br><b>	belong	</b><br><b>	ait olmak	</br>
+ <li><br><b>	</b></br><br><b>	benefit	</b><br><b>	fayda	</br>
+ <li><br><b>	</b></br><br><b>	bet	</b><br><b>	bahis	</br>
+ <li><br><b>	</b></br><br><b>	bleed	</b><br><b>	kanamak	</br>
+ <li><br><b>	</b></br><br><b>	blood	</b><br><b>	kan	</br>
+ <li><br><b>	</b></br><br><b>	boarding time	</b><br><b>	biniş zamanı	</br>
+ <li><br><b>	</b></br><br><b>	boarding card	</b><br><b>	biniş kartı	</br>
+ <li><br><b>	</b></br><br><b>	bone	</b><br><b>	kemik	</br>
+ <li><br><b>	</b></br><br><b>	brake	</b><br><b>	fren	</br>
+ <li><br><b>	</b></br><br><b>	brand	</b><br><b>	marka	</br>
+ <li><br><b>	</b></br><br><b>	brief	</b><br><b>	kısa	</br>
+ <li><br><b>	</b></br><br><b>	bright	</b><br><b>	parlak	</br>
+ <li><br><b>	</b></br><br><b>	bulb	</b><br><b>	ampul	</br>
+ <li><br><b>	</b></br><br><b>	burglar	</b><br><b>	soyguncu	</br>
+ <li><br><b>	</b></br><br><b>	calm	</b><br><b>	sakin	</br>
+ <li><br><b>	</b></br><br><b>	cancel	</b><br><b>	iptal etmek	</br>
+ <li><br><b>	</b></br><br><b>	certain	</b><br><b>	kesin	</br>
+ <li><br><b>	</b></br><br><b>	citizen	</b><br><b>	vatandaş	</br>
+ <li><br><b>	</b></br><br><b>	coach	</b><br><b>	koç, antrenör	</br>
+ <li><br><b>	</b></br><br><b>	coast	</b><br><b>	kıyı	</br>
+ <li><br><b>	</b></br><br><b>	coin	</b><br><b>	madeni para	</br>
+ <li><br><b>	</b></br><br><b>	comb	</b><br><b>	tarak	</br>
+ <li><br><b>	</b></br><br><b>	common	</b><br><b>	yaygın	</br>
+ <li><br><b>	</b></br><br><b>	communicate	</b><br><b>	iletişim kurmak	</br>
+ <li><br><b>	</b></br><br><b>	compare	</b><br><b>	kıyaslamak	</br>
+ <li><br><b>	</b></br><br><b>	complain	</b><br><b>	şikayet etmek	</br>
+ <li><br><b>	</b></br><br><b>	connected flight	</b><br><b>	aktarmalı uçuş	</br>
+ <li><br><b>	</b></br><br><b>	consist	</b><br><b>	oluşmak	</br>
+ <li><br><b>	</b></br><br><b>	contain	</b><br><b>	içermek	</br>
+ <li><br><b>	</b></br><br><b>	convince	</b><br><b>	ikna etmek	</br>
+ <li><br><b>	</b></br><br><b>	count	</b><br><b>	saymak	</br>
+ <li><br><b>	</b></br><br><b>	crime	</b><br><b>	suç	</br>
+ <li><br><b>	</b></br><br><b>	criticize	</b><br><b>	eleştiri yapmak	</br>
+ <li><br><b>	</b></br><br><b>	curtain	</b><br><b>	perde	</br>
+ <li><br><b>	</b></br><br><b>	death	</b><br><b>	ölüm	</br>
+ <li><br><b>	</b></br><br><b>	decrease	</b><br><b>	azalmak	</br>
+ <li><br><b>	</b></br><br><b>	defend	</b><br><b>	savunmak	</br>
+ <li><br><b>	</b></br><br><b>	departure gate	</b><br><b>	çıkış kapısı	</br>
+ <li><br><b>	</b></br><br><b>	destination	</b><br><b>	varış	</br>
+ <li><br><b>	</b></br><br><b>	destroy	</b><br><b>	yok etmek	</br>
+ <li><br><b>	</b></br><br><b>	detail	</b><br><b>	detay	</br>
+ <li><br><b>	</b></br><br><b>	development	</b><br><b>	gelişim	</br>
+ <li><br><b>	</b></br><br><b>	disagree	</b><br><b>	aynı fikirde olmamak	</br>
+ <li><br><b>	</b></br><br><b>	discount	</b><br><b>	indirim	</br>
+ <li><br><b>	</b></br><br><b>	disease	</b><br><b>	hastalık	</br>
+ <li><br><b>	</b></br><br><b>	dive	</b><br><b>	dalmak	</br>
+ <li><br><b>	</b></br><br><b>	divide	</b><br><b>	bölmek	</br>
+ <li><br><b>	</b></br><br><b>	domestic flight	</b><br><b>	iç hat uçuşu	</br>
+ <li><br><b>	</b></br><br><b>	drop	</b><br><b>	düşürmek	</br>
+ <li><br><b>	</b></br><br><b>	drug	</b><br><b>	ilaç,uyuşturucu	</br>
+ <li><br><b>	</b></br><br><b>	dry	</b><br><b>	kuru	</br>
+ <li><br><b>	</b></br><br><b>	duty	</b><br><b>	görev	</br>
+ <li><br><b>	</b></br><br><b>	earthquake	</b><br><b>	deprem	</br>
+ <li><br><b>	</b></br><br><b>	education	</b><br><b>	eğitim	</br>
+ <li><br><b>	</b></br><br><b>	effort	</b><br><b>	çaba	</br>
+ <li><br><b>	</b></br><br><b>	elegant	</b><br><b>	zarif	</br>
+ <li><br><b>	</b></br><br><b>	employer	</b><br><b>	işveren	</br>
+ <li><br><b>	</b></br><br><b>	engine	</b><br><b>	motor	</br>
+ <li><br><b>	</b></br><br><b>	environment	</b><br><b>	çevre	</br>
+ <li><br><b>	</b></br><br><b>	event	</b><br><b>	etkinlik,olay	</br>
+ <li><br><b>	</b></br><br><b>	excuse	</b><br><b>	mazeret	</br>
+ <li><br><b>	</b></br><br><b>	expect	</b><br><b>	ummak	</br>
+ <li><br><b>	</b></br><br><b>	explosion	</b><br><b>	patlama	</br>
+ <li><br><b>	</b></br><br><b>	express	</b><br><b>	ifade etmek	</br>
+ <li><br><b>	</b></br><br><b>	fact	</b><br><b>	gerçek	</br>
+ <li><br><b>	</b></br><br><b>	fair	</b><br><b>	adil	</br>
+ <li><br><b>	</b></br><br><b>	fear	</b><br><b>	korkmak	</br>
+ <li><br><b>	</b></br><br><b>	feed	</b><br><b>	beslemek	</br>
+ <li><br><b>	</b></br><br><b>	field	</b><br><b>	tarla	</br>
+ <li><br><b>	</b></br><br><b>	fist	</b><br><b>	yumruk	</br>
+ <li><br><b>	</b></br><br><b>	fold	</b><br><b>	katlamak	</br>
+ <li><br><b>	</b></br><br><b>	force	</b><br><b>	zorlamak	</br>
+ <li><br><b>	</b></br><br><b>	forgive	</b><br><b>	affetmek	</br>
+ <li><br><b>	</b></br><br><b>	funeral	</b><br><b>	cenaze	</br>
+ <li><br><b>	</b></br><br><b>	gentle	</b><br><b>	nazik	</br>
+ <li><br><b>	</b></br><br><b>	governor	</b><br><b>	vali	</br>
+ <li><br><b>	</b></br><br><b>	ground	</b><br><b>	zemin	</br>
+ <li><br><b>	</b></br><br><b>	guess	</b><br><b>	tahmin etmek	</br>
+ <li><br><b>	</b></br><br><b>	guilty	</b><br><b>	suçlu	</br>
+ <li><br><b>	</b></br><br><b>	harbour	</b><br><b>	liman	</br>
+ <li><br><b>	</b></br><br><b>	hardware	</b><br><b>	donanım	</br>
+ <li><br><b>	</b></br><br><b>	headlight	</b><br><b>	far	</br>
+ <li><br><b>	</b></br><br><b>	hide	</b><br><b>	saklamak	</br>
+ <li><br><b>	</b></br><br><b>	hit	</b><br><b>	çarpmak	</br>
+ <li><br><b>	</b></br><br><b>	hold	</b><br><b>	tutmak	</br>
+ <li><br><b>	</b></br><br><b>	honest	</b><br><b>	dürüst	</br>
+ <li><br><b>	</b></br><br><b>	hope	</b><br><b>	ummak	</br>
+ <li><br><b>	</b></br><br><b>	host	</b><br><b>	misafir etmek	</br>
+ <li><br><b>	</b></br><br><b>	humour	</b><br><b>	espri,mizaç	</br>
+ <li><br><b>	</b></br><br><b>	hurt	</b><br><b>	incitmek	</br>
+ <li><br><b>	</b></br><br><b>	imagine	</b><br><b>	hayal etmek	</br>
+ <li><br><b>	</b></br><br><b>	import	</b><br><b>	ithal etmek	</br>
+ <li><br><b>	</b></br><br><b>	improve	</b><br><b>	geliştirmek	</br>
+ <li><br><b>	</b></br><br><b>	inform	</b><br><b>	bilgilendirmek	</br>
+ <li><br><b>	</b></br><br><b>	injection	</b><br><b>	enjektsiyon	</br>
+ <li><br><b>	</b></br><br><b>	ink	</b><br><b>	mürekkep	</br>
+ <li><br><b>	</b></br><br><b>	insist	</b><br><b>	ısrar etmek	</br>
+ <li><br><b>	</b></br><br><b>	interview	</b><br><b>	röportaj	</br>
+ <li><br><b>	</b></br><br><b>	invent	</b><br><b>	icat etmek	</br>
+ <li><br><b>	</b></br><br><b>	invest	</b><br><b>	yaptırım yapmak	</br>
+ <li><br><b>	</b></br><br><b>	jealous	</b><br><b>	kıskanç	</br>
+ <li><br><b>	</b></br><br><b>	jewel	</b><br><b>	mücevher	</br>
+ <li><br><b>	</b></br><br><b>	law	</b><br><b>	yasa	</br>
+ <li><br><b>	</b></br><br><b>	leaf	</b><br><b>	yaprak	</br>
+ <li><br><b>	</b></br><br><b>	let	</b><br><b>	izin vermek	</br>
+ <li><br><b>	</b></br><br><b>	lie	</b><br><b>	yalan söylemek	</br>
+ <li><br><b>	</b></br><br><b>	liquid	</b><br><b>	sıvı	</br>
+ <li><br><b>	</b></br><br><b>	load	</b><br><b>	yüklemek	</br>
+ <li><br><b>	</b></br><br><b>	low	</b><br><b>	alçak	</br>
+ <li><br><b>	</b></br><br><b>	luggage	</b><br><b>	bagaj	</br>
+ <li><br><b>	</b></br><br><b>	measure	</b><br><b>	ölçmek	</br>
+ <li><br><b>	</b></br><br><b>	member	</b><br><b>	üye	</br>
+ <li><br><b>	</b></br><br><b>	memory	</b><br><b>	bellek,hafıza	</br>
+ <li><br><b>	</b></br><br><b>	military	</b><br><b>	askeri	</br>
+ <li><br><b>	</b></br><br><b>	mind	</b><br><b>	akıl	</br>
+ <li><br><b>	</b></br><br><b>	minister	</b><br><b>	bakan	</br>
+ <li><br><b>	</b></br><br><b>	mosque	</b><br><b>	cami	</br>
+ <li><br><b>	</b></br><br><b>	murder	</b><br><b>	cinayet işlemek	</br>
+ <li><br><b>	</b></br><br><b>	muscle	</b><br><b>	kas	</br>
+ <li><br><b>	</b></br><br><b>	narrow	</b><br><b>	dar	</br>
+ <li><br><b>	</b></br><br><b>	necessary	</b><br><b>	gerekli	</br>
+ <li><br><b>	</b></br><br><b>	neck	</b><br><b>	boyun	</br>
+ <li><br><b>	</b></br><br><b>	obey	</b><br><b>	itaat etmek	</br>
+ <li><br><b>	</b></br><br><b>	offer	</b><br><b>	teklif etmek	</br>
+ <li><br><b>	</b></br><br><b>	official	</b><br><b>	resmi	</br>
+ <li><br><b>	</b></br><br><b>	opinion	</b><br><b>	fikir	</br>
+ <li><br><b>	</b></br><br><b>	order	</b><br><b>	emretmek	</br>
+ <li><br><b>	</b></br><br><b>	out-of-date	</b><br><b>	tarihi geçmiş	</br>
+ <li><br><b>	</b></br><br><b>	owe	</b><br><b>	borcu olmak	</br>
+ <li><br><b>	</b></br><br><b>	own	</b><br><b>	sahip olmak	</br>
+ <li><br><b>	</b></br><br><b>	pain	</b><br><b>	ağrı	</br>
+ <li><br><b>	</b></br><br><b>	palace	</b><br><b>	saray	</br>
+ <li><br><b>	</b></br><br><b>	passenger	</b><br><b>	yolcu	</br>
+ <li><br><b>	</b></br><br><b>	pavement	</b><br><b>	kaldırım	</br>
+ <li><br><b>	</b></br><br><b>	peace	</b><br><b>	barış	</br>
+ <li><br><b>	</b></br><br><b>	penalty	</b><br><b>	ceza	</br>
+ <li><br><b>	</b></br><br><b>	perform	</b><br><b>	yerine getirmek	</br>
+ <li><br><b>	</b></br><br><b>	permission	</b><br><b>	izin	</br>
+ <li><br><b>	</b></br><br><b>	pig	</b><br><b>	domuz	</br>
+ <li><br><b>	</b></br><br><b>	pill	</b><br><b>	hap	</br>
+ <li><br><b>	</b></br><br><b>	pleasant	</b><br><b>	hoş	</br>
+ <li><br><b>	</b></br><br><b>	plug	</b><br><b>	elektrik fişi	</br>
+ <li><br><b>	</b></br><br><b>	poison	</b><br><b>	zehir	</br>
+ <li><br><b>	</b></br><br><b>	population	</b><br><b>	nufus	</br>
+ <li><br><b>	</b></br><br><b>	prefer	</b><br><b>	tercih etmek	</br>
+ <li><br><b>	</b></br><br><b>	pregnant	</b><br><b>	hamile	</br>
+ <li><br><b>	</b></br><br><b>	press	</b><br><b>	sıkıştırmak	</br>
+ <li><br><b>	</b></br><br><b>	prime minister	</b><br><b>	başbakan	</br>
+ <li><br><b>	</b></br><br><b>	private	</b><br><b>	özel	</br>
+ <li><br><b>	</b></br><br><b>	promise	</b><br><b>	söz vermek	</br>
+ <li><br><b>	</b></br><br><b>	protect	</b><br><b>	korumak	</br>
+ <li><br><b>	</b></br><br><b>	protest	</b><br><b>	protesto etmek	</br>
+ <li><br><b>	</b></br><br><b>	provide	</b><br><b>	sağlamak	</br>
+ <li><br><b>	</b></br><br><b>	public	</b><br><b>	halka açık	</br>
+ <li><br><b>	</b></br><br><b>	publish	</b><br><b>	yayınlamak	</br>
+ <li><br><b>	</b></br><br><b>	punish	</b><br><b>	cezalandırmak	</br>
+ <li><br><b>	</b></br><br><b>	purchase	</b><br><b>	satın almak	</br>
+ <li><br><b>	</b></br><br><b>	purpose	</b><br><b>	amaç	</br>
+ <li><br><b>	</b></br><br><b>	quit	</b><br><b>	bırakmak	</br>
+ <li><br><b>	</b></br><br><b>	rate	</b><br><b>	oran	</br>
+ <li><br><b>	</b></br><br><b>	realize	</b><br><b>	fark etmek	</br>
+ <li><br><b>	</b></br><br><b>	recover	</b><br><b>	iyileşmek	</br>
+ <li><br><b>	</b></br><br><b>	regular	</b><br><b>	düzenli	</br>
+ <li><br><b>	</b></br><br><b>	remind	</b><br><b>	hatırlatmak	</br>
+ <li><br><b>	</b></br><br><b>	remove	</b><br><b>	ortadan kaldırmak	</br>
+ <li><br><b>	</b></br><br><b>	resign	</b><br><b>	istifa etmek	</br>
+ <li><br><b>	</b></br><br><b>	responsible	</b><br><b>	sorumlu	</br>
+ <li><br><b>	</b></br><br><b>	result	</b><br><b>	sonuç	</br>
+ <li><br><b>	</b></br><br><b>	root	</b><br><b>	kök	</br>
+ <li><br><b>	</b></br><br><b>	search	</b><br><b>	aramak	</br>
+ <li><br><b>	</b></br><br><b>	seatbelt	</b><br><b>	emniyet kemeri	</br>
+ <li><br><b>	</b></br><br><b>	secret	</b><br><b>	sır	</br>
+ <li><br><b>	</b></br><br><b>	seem	</b><br><b>	görünmek	</br>
+ <li><br><b>	</b></br><br><b>	shoot	</b><br><b>	vurmak	</br>
+ <li><br><b>	</b></br><br><b>	shoplifting	</b><br><b>	aşırmak	</br>
+ <li><br><b>	</b></br><br><b>	shut	</b><br><b>	kapatmak	</br>
+ <li><br><b>	</b></br><br><b>	signature	</b><br><b>	imza	</br>
+ <li><br><b>	</b></br><br><b>	silk	</b><br><b>	ipek	</br>
+ <li><br><b>	</b></br><br><b>	size	</b><br><b>	beden	</br>
+ <li><br><b>	</b></br><br><b>	skill	</b><br><b>	yetenek	</br>
+ <li><br><b>	</b></br><br><b>	skin	</b><br><b>	ten, deri	</br>
+ <li><br><b>	</b></br><br><b>	sneeze	</b><br><b>	hapşırmak	</br>
+ <li><br><b>	</b></br><br><b>	snore	</b><br><b>	horlamak	</br>
+ <li><br><b>	</b></br><br><b>	socket	</b><br><b>	duy,priz	</br>
+ <li><br><b>	</b></br><br><b>	soldier	</b><br><b>	asker	</br>
+ <li><br><b>	</b></br><br><b>	solve	</b><br><b>	çözmek	</br>
+ <li><br><b>	</b></br><br><b>	souvenir	</b><br><b>	hediyelik eşya	</br>
+ <li><br><b>	</b></br><br><b>	space	</b><br><b>	uzay boşluğu	</br>
+ <li><br><b>	</b></br><br><b>	spy	</b><br><b>	casus	</br>
+ <li><br><b>	</b></br><br><b>	staff	</b><br><b>	görevli personel	</br>
+ <li><br><b>	</b></br><br><b>	stage	</b><br><b>	sahne	</br>
+ <li><br><b>	</b></br><br><b>	stare	</b><br><b>	dik dik bakmak	</br>
+ <li><br><b>	</b></br><br><b>	stationery	</b><br><b>	kırtasiye	</br>
+ <li><br><b>	</b></br><br><b>	steal	</b><br><b>	çalmak	</br>
+ <li><br><b>	</b></br><br><b>	steward	</b><br><b>	hostes	</br>
+ <li><br><b>	</b></br><br><b>	stomach	</b><br><b>	mide	</br>
+ <li><br><b>	</b></br><br><b>	strange	</b><br><b>	garip	</br>
+ <li><br><b>	</b></br><br><b>	stranger	</b><br><b>	yabancı	</br>
+ <li><br><b>	</b></br><br><b>	sudden	</b><br><b>	ani	</br>
+ <li><br><b>	</b></br><br><b>	suffer	</b><br><b>	acı çekmek	</br>
+ <li><br><b>	</b></br><br><b>	suggest	</b><br><b>	önermek	</br>
+ <li><br><b>	</b></br><br><b>	support	</b><br><b>	desteklemek	</br>
+ <li><br><b>	</b></br><br><b>	survive	</b><br><b>	hayatta kalmak	</br>
+ <li><br><b>	</b></br><br><b>	tail	</b><br><b>	kuyruk	</br>
+ <li><br><b>	</b></br><br><b>	take off	</b><br><b>	(uçak)havalanmak	</br>
+ <li><br><b>	</b></br><br><b>	target	</b><br><b>	hedef	</br>
+ <li><br><b>	</b></br><br><b>	temporary	</b><br><b>	geçici	</br>
+ <li><br><b>	</b></br><br><b>	tiny	</b><br><b>	küçücük	</br>
+ <li><br><b>	</b></br><br><b>	tool	</b><br><b>	alet	</br>
+ <li><br><b>	</b></br><br><b>	trade	</b><br><b>	ticaret	</br>
+ <li><br><b>	</b></br><br><b>	translate	</b><br><b>	tercüme etmek	</br>
+ <li><br><b>	</b></br><br><b>	trip	</b><br><b>	gezi	</br>
+ <li><br><b>	</b></br><br><b>	truck	</b><br><b>	kamyon	</br>
+ <li><br><b>	</b></br><br><b>	trust	</b><br><b>	güvenmek	</br>
+ <li><br><b>	</b></br><br><b>	tyre	</b><br><b>	lastik	</br>
+ <li><br><b>	</b></br><br><b>	update	</b><br><b>	güncellemek	</br>
+ <li><br><b>	</b></br><br><b>	vote	</b><br><b>	oy kullanmak	</br>
+ <li><br><b>	</b></br><br><b>	wide	</b><br><b>	geniş	</br>
+ <li><br><b>	</b></br><br><b>	wish	</b><br><b>	dilek	</br>
+ <li><br><b>	</b></br><br><b>	wonder	</b><br><b>	merak etmek	</br>
+ <li><br><b>	</b></br><br><b>	account	</b><br><b>	borç hesapları	</br>
+ <li><br><b>	</b></br><br><b>	accounts payable	</b><br><b>	alacak hesapları	</br>
+ <li><br><b>	</b></br><br><b>	accounts receivable	</b><br><b>	borçlular hesabı	</br>
+ <li><br><b>	</b></br><br><b>	accuse	</b><br><b>	suçlamak	</br>
+ <li><br><b>	</b></br><br><b>	achievement	</b><br><b>	başarı	</br>
+ <li><br><b>	</b></br><br><b>	adjust	</b><br><b>	ayarlamak	</br>
+ <li><br><b>	</b></br><br><b>	admit	</b><br><b>	kabul etmek	</br>
+ <li><br><b>	</b></br><br><b>	advertise	</b><br><b>	reklam yapmak	</br>
+ <li><br><b>	</b></br><br><b>	advocate	</b><br><b>	avukat	</br>
+ <li><br><b>	</b></br><br><b>	affair	</b><br><b>	ilişki	</br>
+
+
+</ul> 
+</div> 
+More script and css style
+: <a href="https://android-bilgisayar.blogspot.com" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">Android Bilgisayar </a></div>
+</body>
+</html>
+ 
